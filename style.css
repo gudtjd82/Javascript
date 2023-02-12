@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+}
+#active {
+    color:coral;
+}
+#source {
+    text-decoration: underline;
+}
+#grid {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+}
+#video {
+    padding: 20px;
+}
+#expl {
+    padding-left: 20px;
+}
+a {
+    color:black;
+    text-decoration: none;
+}
+h1 {
+    font-size: 60px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    margin: 0;
+}
+h2 {
+    font-size: 45px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#index {
+    border-right: 2px solid black;
+    width: 170px;
+}
+#grid ol {
+    font-size: 20px;
+    
+    padding: 20px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 0;
+    margin: 0;
+}
+@media(max-width:600px){
+    #grid {
+        display: block;
+    }
+    #grid ol {
+        border-right: none;
+        border-bottom: 2px solid black;
+        border-bottom-style: dotted;
+        width: 100%;
+    }
+}
