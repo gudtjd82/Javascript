@@ -4,9 +4,47 @@
         <title>Photography Basics - Shutter Speed</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <script>
+            function day_to_night(selectorLists){
+                selectorLists.forEach(selectorList => {
+                    selectorList.forEach(selector=>{
+                        if(selector !== document.getElementById('active')){
+                            selector.style.color = 'white';
+                        }
+                        selector.style.borderColor = 'white';
+                    });
+                });
+            }
+            function night_to_day(selectorLists){
+                selectorLists.forEach(selectorList =>{
+                    selectorList.forEach(selector => {
+                        if(selector !== document.getElementById('active')){
+                            selector.style.color = 'black';
+                        }
+                        selector.style.borderColor = 'black';
+                    });
+                });
+            }
+        </script>
     </head>
 
     <body>
+        <input type="button" value="night" onclick="
+            const selectorLists = [document.querySelectorAll('a'), document.querySelectorAll('div'), document.querySelectorAll('h1')];
+            var target = document.querySelector('body');
+            if(this.value === 'day'){//night->day
+                target.style.backgroundColor = 'white'; 
+                target.style.color = 'black'; 
+                night_to_day(selectorLists);
+                this.value = 'night';
+            }
+            else{//day->night
+                target.style.backgroundColor = 'black'; 
+                target.style.color = 'white'; 
+                day_to_night(selectorLists);
+                this.value = 'day';
+            }
+        ">
         <h1><a href="index.html">Photography Basics</a></h1>
         <div id="grid">
             <div id="index">
