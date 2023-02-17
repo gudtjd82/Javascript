@@ -19,7 +19,7 @@ body {
 }
 a {
     color:black;
-    text-decoration: none;
+    text-decoration: underline 2px;
 }
 h1 {
     font-size: 60px;

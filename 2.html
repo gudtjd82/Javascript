@@ -4,29 +4,13 @@
         <title>Photography Basics - Shutter Speed</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="colors.js"></script>
     </head>
 
     <body>
         <input type="button" value="night" onclick="
-            const selectorLists = [document.querySelectorAll('a'), document.querySelectorAll('div'), document.querySelectorAll('h1')];
-            var target = document.querySelector('body');
-            if(this.value === 'day'){//night->day
-                target.style.backgroundColor = 'white'; 
-                target.style.color = 'black'; 
-                this.value = 'night';
-
-                //link color 변경
-                night_to_day(selectorLists);
-            }
-            else{//day->night
-                target.style.backgroundColor = 'black'; 
-                target.style.color = 'white'; 
-                this.value = 'day';
-
-                //link color 변경
-                day_to_night(selectorLists);
-            }
+            nightDayHandler(this);
         ">
         <h1><a href="index.html">Photography Basics</a></h1>
         <div id="grid">
