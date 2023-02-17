@@ -4,28 +4,7 @@
         <title>Photography Basics - Shutter Speed</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
-        <script>
-            function day_to_night(selectorLists){
-                selectorLists.forEach(selectorList => {
-                    selectorList.forEach(selector=>{
-                        if(selector !== document.getElementById('active')){
-                            selector.style.color = 'white';
-                        }
-                        selector.style.borderColor = 'white';
-                    });
-                });
-            }
-            function night_to_day(selectorLists){
-                selectorLists.forEach(selectorList =>{
-                    selectorList.forEach(selector => {
-                        if(selector !== document.getElementById('active')){
-                            selector.style.color = 'black';
-                        }
-                        selector.style.borderColor = 'black';
-                    });
-                });
-            }
-        </script>
+        <script src="script.js"></script>
     </head>
 
     <body>
@@ -41,8 +20,8 @@
             else{//day->night
                 target.style.backgroundColor = 'black'; 
                 target.style.color = 'white'; 
-                day_to_night(selectorLists);
                 this.value = 'day';
+                day_to_night(selectorLists);
             }
         ">
         <h1><a href="index.html">Photography Basics</a></h1>
