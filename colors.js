@@ -8,8 +8,10 @@ var Body = {
     }
 };
 
+//var darkStorage = window.localStorage;
 
-
+// var referrer = document.referrer;   //이전 페이지 url
+// var ref_dark_value = referrer.docu
 
 function day_to_night(...selectorLists){
     Body.setColor('white');
@@ -41,12 +43,21 @@ function night_to_day(...selectorLists){
 }
 
 function nightDayHandler(self){
+    // if(darkStorage.getItem('dark_value') === null){
+    //     currDarkValue = 'night';
+    // }else{
+    //     currDarkValue = darkStorage.getItem('dark_value');
+    //     document.write(currDarkValue);
+    // }
+
     if(self.value === 'day'){//night->day
         night_to_day(document.querySelectorAll('a'), document.querySelectorAll('div'), document.querySelectorAll('h1'));
         self.value = 'night';
+        //darkStorage.setItem('dark_value', self.value);
     }
     else{//day->night
         day_to_night(document.querySelectorAll('a'), document.querySelectorAll('div'), document.querySelectorAll('h1'));
         self.value = 'day';
+        //darkStorage.setItem('dark_value', self.value);
     }
 }
